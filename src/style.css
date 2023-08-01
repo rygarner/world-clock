@@ -1,42 +1,63 @@
 body {
-  background-color: #f9f7fe;
+  background: linear-gradient(to right, #4b1248be, #fcbf64);
   font-family: sans-serif;
+  text-shadow: 8px 10px 22px rgba(0, 0, 0, 0.473);
 }
 
 select {
   display: block;
   width: 100%;
   font-size: 18px;
-  border-radius: 4px;
+  border-radius: 10px;
+  border: none;
   padding: 5px 0;
+  background: #ffffff13;
 }
 h1 {
   text-align: center;
   font-family: sans-serif;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: bold;
 }
 h2 {
   margin: 0;
   font-size: 24px;
 }
+hr {
+  margin: 0 auto;
+  border: none;
+  height: 3px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(44, 15, 58, 0.9),
+    rgba(0, 0, 0, 0)
+  );
+}
 footer {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 5px;
   text-align: center;
   font-size: 14px;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .container {
   max-width: 600px;
   margin: 60px auto;
-  background: white;
+  background: rgba(255, 255, 255, 0.24);
   padding: 30px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 30px;
 }
 .city {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 .city:last-child {
   border: none;

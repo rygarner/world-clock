@@ -1,24 +1,40 @@
 function updateTime() {
   let newYork = document.querySelector("#new-york-city");
-  let newYorkDate = newYork.querySelector(".date");
-  let newYorkTime = newYork.querySelector(".time");
-  let nyTime = moment().tz("America/New_York");
+  if (newYork) {
+    let newYorkDate = newYork.querySelector(".date");
+    let newYorkTime = newYork.querySelector(".time");
+    let nyTime = moment().tz("America/New_York");
 
-  newYorkDate.innerHTML = nyTime.format("MMMM Do YYYY");
-  newYorkTime.innerHTML = `${nyTime.format("h:mm:ss")} <small>${nyTime.format(
-    "A"
-  )}</small>`;
+    newYorkDate.innerHTML = nyTime.format("MMMM Do YYYY");
+    newYorkTime.innerHTML = `${nyTime.format("h:mm:ss")} <small>${nyTime.format(
+      "A"
+    )}</small>`;
+  }
 
   //San Diego
   let sanDiego = document.querySelector("#san-diego");
-  let sanDiegoDate = sanDiego.querySelector(".date");
-  let sanDiegoTime = sanDiego.querySelector(".time");
-  let sdTime = moment().tz("America/Los_Angeles");
+  if (sanDiego) {
+    let sanDiegoDate = sanDiego.querySelector(".date");
+    let sanDiegoTime = sanDiego.querySelector(".time");
+    let sdTime = moment().tz("America/Los_Angeles");
 
-  sanDiegoDate.innerHTML = sdTime.format("MMMM Do YYYY");
-  sanDiegoTime.innerHTML = `${sdTime.format("h:mm:ss")} <small>${sdTime.format(
-    "A"
-  )}</small>`;
+    sanDiegoDate.innerHTML = sdTime.format("MMMM Do YYYY");
+    sanDiegoTime.innerHTML = `${sdTime.format(
+      "h:mm:ss"
+    )} <small>${sdTime.format("A")}</small>`;
+  }
+
+  let singapore = document.querySelector("#singapore");
+  if (singapore) {
+    let singaporeDate = singapore.querySelector(".date");
+    let singaporeTime = singapore.querySelector(".time");
+    let singpTime = moment().tz("Asia/Singapore");
+
+    singaporeDate.innerHTML = singpTime.format("MMMM Do YYYY");
+    singaporeTime.innerHTML = `${singpTime.format(
+      "h:mm:ss"
+    )} <small>${singpTime.format("A")}</small>`;
+  }
 }
 
 function updateCity(event) {
@@ -39,11 +55,11 @@ function updateCity(event) {
     "A"
   )}</small></div>
   </div>
+  <a href="index.html">All Cities</a>
   `;
 }
-
+updateTime();
 setInterval(updateTime, 1000);
 
-let cittiesSelect = document.querySelector("#city");
-
-cittiesSelect.addEventListener("change", updateCity);
+let citiesSelect = document.querySelector("#city");
+citiesSelect.addEventListener("change", updateCity);
