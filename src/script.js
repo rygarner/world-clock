@@ -6,9 +6,7 @@ function updateTime() {
     let nyTime = moment().tz("America/New_York");
 
     newYorkDate.innerHTML = nyTime.format("MMMM Do YYYY");
-    newYorkTime.innerHTML = `${nyTime.format("h:mm:ss")} <small>${nyTime.format(
-      "A"
-    )}</small>`;
+    newYorkTime.innerHTML = nyTime.format("h:mm:ss [<small>]A[</small>]");
   }
 
   //San Diego
@@ -19,9 +17,7 @@ function updateTime() {
     let sdTime = moment().tz("America/Los_Angeles");
 
     sanDiegoDate.innerHTML = sdTime.format("MMMM Do YYYY");
-    sanDiegoTime.innerHTML = `${sdTime.format(
-      "h:mm:ss"
-    )} <small>${sdTime.format("A")}</small>`;
+    sanDiegoTime.innerHTML = sdTime.format("h:mm:ss [<small>]A[</small>]");
   }
 
   let singapore = document.querySelector("#singapore");
@@ -31,9 +27,7 @@ function updateTime() {
     let singpTime = moment().tz("Asia/Singapore");
 
     singaporeDate.innerHTML = singpTime.format("MMMM Do YYYY");
-    singaporeTime.innerHTML = `${singpTime.format(
-      "h:mm:ss"
-    )} <small>${singpTime.format("A")}</small>`;
+    singaporeTime.innerHTML = singpTime.format("h:mm:ss [<small>]A[</small>]");
   }
 }
 
@@ -51,9 +45,7 @@ function updateCity(event) {
      <h2>${cityName}</h2>
      <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
     </div>
-    <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
-    "A"
-  )}</small></div>
+    <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
   </div>
   <a href="index.html">All Cities</a>
   `;
